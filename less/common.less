@@ -1,0 +1,166 @@
+.px2px(@name, @px) {
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    } // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    } // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    } // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-size: 0.14rem;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f5f5f5
+}
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+em,
+button,
+input,
+textarea,
+th,
+td,
+a,
+img,
+header,
+footer,
+nav,
+aside,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+:focus {
+    outline: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+input,
+button,
+select,
+textarea {
+    font-size: 100%;
+    outline: none;
+}
+
+input,
+select,
+textarea {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+textarea {
+    resize: none
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    cursor: pointer;
+    color: #18baf9;
+    text-decoration: none;
+}
+
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+body.dialog-open {
+    position: fixed;
+    width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*css为clearfix，清除浮动*/
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*IE/7/6*/
+}

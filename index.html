@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <script src="js/flex-rem.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>城市选择</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="app-container">
+            <div class="top-fixd-c">
+                <div class="head-c">
+                    <input type="text" placeholder="请输入城市名">
+                    <img src="img/search-icon.png" alt="">
+                </div>
+                <div class="title1">当前定位城市</div>
+                <div class="position-city">
+                    <div>
+                        <img src="img/areas.png" alt="">
+                        <span>郑州</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="scroll-container">
+                    <div class="title2">热门城市</div>
+                    <ul class="hot-city-container">
+                        <li v-for="item in hotCityList">{{item}}</li>
+                    </ul>
+                    <!-- 城市列表排序 -->
+                    <div v-for="item in allCityList" class="total-city-list">
+                        <div class="letter-modules">
+                            <div class="letter-title">{{item.titleWords}}</div>
+                            <ul class="city-list">
+                                <li v-for="city in item.arr">{{city.name}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航栏 -->
+            <ul class="nav-container">
+                <li v-for="item,index in navList" v-tap.prevent="[getLetterIndex,index]" :data-index="index">
+                    {{item}}
+                    <div class="letter-p-c">
+                        <img src="img/letterPosition.png" alt="">
+                        <span>{{item}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue-2.5.21.js"></script>
+    <script src="https://unpkg.com/better-scroll@1.15.1/dist/bscroll.min.js"></script>
+    <!-- <script src="js/iscroll-probe.js"></script> -->
+    <script src="js/vue-resource.js"></script>
+    <script src="js/vue-tap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

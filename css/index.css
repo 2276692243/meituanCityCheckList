@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  font-size: 0.14rem;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f5f5f5;
+}
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+em,
+button,
+input,
+textarea,
+th,
+td,
+a,
+img,
+header,
+footer,
+nav,
+aside,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+:focus {
+  outline: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+input,
+button,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+}
+input,
+select,
+textarea {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+textarea {
+  resize: none;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  cursor: pointer;
+  color: #18baf9;
+  text-decoration: none;
+}
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+body.dialog-open {
+  position: fixed;
+  width: 100%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+html,
+body {
+  background: #f5f5f5;
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+.app-container {
+  height: 100%;
+  position: relative;
+}
+.app-container {
+  position: relative;
+}
+.top-fixd-c {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.head-c {
+  width: 21.59rem;
+  margin: 0.38rem auto 0;
+  position: relative;
+}
+.head-c input {
+  font-family: PingFangSC-Regular;
+  font-size: 0.88rem;
+  font-weight: normal;
+  width: 100%;
+  height: 1.91rem;
+  background-color: #ffffff;
+  border-radius: 0.78rem;
+  padding-left: 1.72rem;
+}
+.head-c img {
+  position: absolute;
+  left: 0.41rem;
+  top: 0.5rem;
+  width: 0.84rem;
+}
+.wrapper {
+  position: absolute;
+  top: 7.7rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+}
+.title1 {
+  width: 21.59rem;
+  margin: 1rem auto 0.94rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.88rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.06rem;
+  letter-spacing: 0.02rem;
+  color: #333333;
+}
+.position-city {
+  display: inline-block;
+  padding: 0 0.94rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.position-city div {
+  padding: 0 1.19rem;
+  height: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  background-color: #ffffff;
+  border-radius: 0.19rem;
+  border: solid 0.06rem #dcdcdc;
+  font-size: 0.88rem;
+}
+.position-city div img {
+  width: 0.72rem;
+  vertical-align: middle;
+}
+.hot-city-container {
+  padding: 0.91rem 8.5% 0 4%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.hot-city-container li {
+  width: 5.94rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 0.19rem;
+  border: solid 0.06rem #dcdcdc;
+  margin-right: 1.34rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.88rem;
+  font-weight: normal;
+}
+.hot-city-container li:nth-child(3n) {
+  margin-right: 0;
+}
+.hot-city-container li:nth-child(n+4) {
+  margin-top: 0.78rem;
+}
+.letter-title,
+.title2 {
+  height: 2.66rem;
+  line-height: 2.66rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.78rem;
+  font-weight: normal;
+  color: #333333;
+  padding-left: 0.97rem;
+}
+.city-list li {
+  background: #ffffff;
+  height: 2.78rem;
+  line-height: 2.78rem;
+  margin-top: 2px;
+  padding-left: 0.94rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.85rem;
+  color: #333333;
+}
+.city-list li:first-child {
+  margin-top: 0;
+}
+.nav-container {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-top: 2.6rem;
+  z-index: 1000;
+  width: 2.41rem;
+  text-align: center;
+}
+.nav-container li {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  width: 1.4rem;
+  margin: 0 auto;
+  font-family: PingFangSC-Regular;
+  font-size: 0.75rem;
+  font-weight: normal;
+  position: relative;
+  border-radius: 50%;
+}
+.nav-container li .letter-p-c {
+  position: absolute;
+  left: -4rem;
+  top: -1.05rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.nav-container li .letter-p-c img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(-90deg);
+  z-index: -1;
+}
+.nav-container li .letter-p-c span {
+  color: #000;
+}
+.nav-container li .act-letter-c {
+  opacity: 1;
+}
+.nav-container .act-li {
+  background: #3aa0f1;
+}
